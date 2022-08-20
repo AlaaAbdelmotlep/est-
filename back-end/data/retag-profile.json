@@ -1,0 +1,28 @@
+{
+    "retagPersonalInfo": {
+      "EnglishName": "Retag Ahmadoly El-dein Khalifa",
+      "ArabicName": " ريتاج احمدولي الدين خليفه",
+      "Gender": "female",
+      "DateOfBirth": "26 / 9 / 2003",
+      "NationalIDNumber": "30309262502382",
+      "PassportNumber": "",
+      "EmailAddress": "retag@gmail.com",
+      "Nationality": "Egypt",
+      "MobileNumber": "12340",
+      "Landline": "12340",
+      "CountryCity": "Asyut",
+      "Address1": "aaaaaa",
+      "Address2": "gggg"
+    },
+    "retagParentInformation": {
+      "Name": "Retafge Parent",
+      "Email": "retage@gmail.com",
+      "Relationship": "mother"
+    },
+    "retagSchoolInformation": {
+      "SchoolName": "retage school",
+      "Grade": "132",
+      "YearOfGraduation": "2011"
+    }
+  }
+  
