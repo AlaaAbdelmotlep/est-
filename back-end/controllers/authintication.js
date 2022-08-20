@@ -1,8 +1,6 @@
 const jwt = require("jsonwebtoken");
 
 exports.userLogin = (req, res, next) => {
-
-  console.log(req.body);
   
   if (req.body.email == "amr@gmail.com") {
 
@@ -11,24 +9,25 @@ exports.userLogin = (req, res, next) => {
         email: req.body.email,
       },
       "ESTEXAM",
-      { expiresIn: "24h" }
+      { expiresIn: "240s" }
     );
 
-    res.status(200).json({ message: "Login Success", token });
+    res.json({ message: "Login Success", token, status: 200 });
 
-  } else if (req.body.email == "alaa@gmail.com") {
+  } else if (req.body.email == "retag@gmail.com") {
 
     let token = jwt.sign(
       {
         email: req.body.email,
       },
       "ESTEXAM",
-      { expiresIn: "24h" }
+      { expiresIn: "240s" }
     );
 
-    res.status(200).json({ message: "Login Success", token });
+    return res.json({ message: "Login Success", token, status: 200 });
 
   } else {
-    throw new Error("Not Authorized.");
+
+    return res.json({ message: "Unauthorizied" ,status: 401});
   }
 };

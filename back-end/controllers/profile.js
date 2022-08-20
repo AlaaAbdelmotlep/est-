@@ -1,19 +1,20 @@
 const fs = require("fs");
 
-const amrProfileObj = fs.readFileSync("./data/profile.json");
+const amrProfileObj = fs.readFileSync("./data/amr-profile.json");
+const retagProfileObj = fs.readFileSync("./data/retag-profile.json");
 
 module.exports = (req, res, next) => {
   if (req.email == "amr@gmail.com") {
-
     const amrProfile = JSON.parse(amrProfileObj);
 
-    res.status(200).json({ message: "Profile Date", amrProfile });
+    res.status(200).json({ message: "Profile Date", amrProfile, status: 200 });
+  } else if (req.email == "retag@gmail.com") {
+    const retagProfile = JSON.parse(retagProfileObj);
 
-  } else if (req.email == "alaa@gmail.com") {
-
-    res.status(200).json({ message: "Hi Alaa"});
-
+    res
+      .status(200)
+      .json({ message: "Profile Date", retagProfile, status: 200 });
   } else {
-    throw new Error("Not Authorized.");
+    res.status(200).json({ message: "Not Authorized.", status: 400 });
   }
 };

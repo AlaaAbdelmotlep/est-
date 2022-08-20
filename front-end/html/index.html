@@ -296,7 +296,7 @@
                                     <a
                                       href="https://www.egyptianscholastictest.com/news/details?id=6178295adcb6424972fc1ba8"
                                       ><div>
-                                        <button class="jss14">
+                                        <button style="margin-top: 10px;" class="jss14">
                                           Prepare for the EST
                                           <svg
                                             stroke="currentColor"
@@ -364,7 +364,7 @@
                                     <a
                                       href="https://www.egyptianscholastictest.com/upcomingtests"
                                       ><div>
-                                        <button class="jss14">
+                                        <button style="margin-top: 10px;" class="jss14">
                                           Register Now
                                           <svg
                                             stroke="currentColor"
@@ -1140,10 +1140,10 @@
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
               >
-                <div>
-                  <button class="jss14" onclick="loginLogic()">LOGIN</button>
-                </div>
-                <!-- <div><button class="jss14 loginButton" onclick="login()"><a class="loginLink" >LOGIN</a></button></div> -->
+                <!-- <div>
+                  <button class="jss14" id="submitBtn" onclick="loginLogic()">LOGIN</button>
+                </div> -->
+                <div><button class="jss14" id="submitBtn"><a href="#" onclick="return preventDefualt()">LOGIN</a></button></div>
               </div>
             </form>
           </div>
@@ -1161,39 +1161,5 @@
     </div>
 
     <script type="text/javascript" src="../js/index.js"></script>
-
-    <!-- <script type="text/javascript">
-      const loginLogic = async () => {
-        const rawResponse = await fetch("http://localhost:3000/login", {
-          method: "POST",
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email: "amr@gmail.com", password: "123" }),
-        });
-
-        const content = await rawResponse.json();
-
-        console.log(content, "here");
-      };
-
-
-
-    </script> -->
   </body>
 </html>
-
-<!-- 
-fetch("")
-.then((response) => {
-})
-.catch(function (err) {
-  console.log("Unable to fetch -", err);
-}); -->
-<!-- headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }, -->
-<!-- const userEmail = document.getElementsByClassName("login")[0];
-      const userPassword = document.getElementsByName("login")[1]; -->
