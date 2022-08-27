@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/info.css" />
     <link rel="stylesheet" href="../floating button/fab.css" />
+    <link rel="stylesheet" href="../css/side-nav.css" />
 
     <title>my info</title>
   </head>
@@ -53,6 +54,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
+              onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -371,7 +373,7 @@
                                         </svg>
                                       </div>
                                       <object
-                                      class="student_img"
+                                        class="student_img"
                                         data=""
                                         type="image/png"
                                       >
@@ -857,7 +859,11 @@
                                     ></path>
                                   </svg>
                                 </div>
-                                <object class="id_copy" data="" type="image/png">
+                                <object
+                                  class="id_copy"
+                                  data=""
+                                  type="image/png"
+                                >
                                   <img
                                     src="../../../../static/images/pdf.svg"
                                   />
@@ -1096,8 +1102,7 @@
                                       aria-haspopup="listbox"
                                       aria-labelledby="demo-customized-select-label mui-component-select-parentalInfo[0].relation"
                                       id="mui-component-select-parentalInfo[0].relation"
-                                    >
-                                    </div>
+                                    ></div>
                                     <input
                                       name="parentalInfo[0].relation"
                                       aria-hidden="true"
@@ -1182,11 +1187,9 @@
                                       aria-labelledby="demo-customized-select-label mui-component-select-education.school"
                                       id="mui-component-select-education.school"
                                     >
-                                      <span
-                                        class="jss122"
-                                        id="school_city"
-                                        >- </span
-                                      >
+                                      <span class="jss122" id="school_city"
+                                        >-
+                                      </span>
                                     </div>
                                     <input
                                       name="education.school"
@@ -1247,8 +1250,7 @@
                                       aria-haspopup="listbox"
                                       aria-labelledby="demo-customized-select-label mui-component-select-education.grade"
                                       id="mui-component-select-education.grade"
-                                    >
-                                    </div>
+                                    ></div>
                                     <input
                                       name="education.grade"
                                       aria-hidden="true"
@@ -1309,8 +1311,7 @@
                                       aria-haspopup="listbox"
                                       aria-labelledby="demo-customized-select-label mui-component-select-education.schoolGraduationDate"
                                       id="mui-component-select-education.schoolGraduationDate"
-                                    >
-                                    </div>
+                                    ></div>
                                     <input
                                       name="education.schoolGraduationDate"
                                       aria-hidden="true"
@@ -1427,7 +1428,6 @@
       </div>
     </div>
 
-
     <div id="fixedone"></div>
     <div class="fab-container">
       <div class="fab fab-icon-holder">
@@ -1447,7 +1447,7 @@
           <span class="fab-label">Logout</span>
           <div class="fab-icon-holder">
             <i class="fas fa-file-alt">
-              <a href="./index.html">
+              <a href="./index.html" id="logout">
                 <img src="../assist/images/logout.svg" />
               </a>
             </i>
@@ -1477,7 +1477,7 @@
           <span class="fab-label">Test Registration</span>
           <div class="fab-icon-holder">
             <i class="fas fa-comment-alt">
-              <a href="./news.html">
+              <a href="./upcomingtests.html">
                 <img src="../assist/images/new.svg" />
               </a>
             </i>
@@ -1487,7 +1487,7 @@
           <span class="fab-label">My Tests</span>
           <div class="fab-icon-holder">
             <i class="fas fa-comment-alt">
-              <a href="./upcomingtests.html">
+              <a href="./myregistration.html">
                 <img src="../assist/images/registrations.svg" />
               </a>
             </i>
@@ -1516,14 +1516,50 @@
       </ul>
     </div>
 
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="
+        display: none;
+        width: 40%;
+        padding: 0;
+        font-size: 1.15em;
+        background: #0e4c8d;
+        padding-top: 50px;
+        z-index: 9999;
+      "
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a  href="/html/index.html" id="a_1"
+        ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
+      </a>
+      <a href="/html/about.html"">About</a>
+      <a href="/html/news.html">News</a>
+      <a href="/html/news.html">Teacher Resources</a>
+      <a href="/html/faqs.html">FAQs</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "46%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
 
     <script type="text/javascript" src="../js/info.js"></script>
 
     <script>
       const accessToken = localStorage.getItem("token");
 
-      if(!accessToken){
-        console.log("HERE")
+      if (!accessToken) {
+        console.log("HERE");
         window.location.href = "./index.html";
       }
     </script>

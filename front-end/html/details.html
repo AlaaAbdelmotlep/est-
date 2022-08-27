@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/details.css" />
+    <link rel="stylesheet" href="../css/side-nav.css" />
+
     <title>details</title>
   </head>
   <body>
@@ -13,9 +15,7 @@
         <div class="MuiContainer-root MuiContainer-maxWidthLg">
           <div class="jss1">
             <div class="jss3">
-              <a href="/"
-                ><img src="../assist/images/3.jpg" alt="est"
-              /></a>
+              <a href="/"><img src="../assist/images/3.jpg" alt="est" /></a>
             </div>
             <div class="jss5">
               <div>
@@ -56,6 +56,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
+              onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -150,16 +151,16 @@
                     ><img src="../assist/images/2.png" alt="est" />
                   </a>
                   <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/upcomingtests">Registrations</a></li>
-                    <li><a href="/news">News</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/dashboard.html">Dashboard</a></li>
+                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                    <li><a href="/html/news.html">News</a></li>
                     <li>
                       <a href="/news?filter=Teacher+Resources"
                         >Teacher Resources</a
                       >
                     </li>
-                    <li><a href="/faqs">FAQs</a></li>
+                    <li><a href="/html/faqs.html">FAQs</a></li>
                     <li>
                       <a href="mailto:tests@egyptianscholastictest.com"
                         >Contact Us</a
@@ -222,9 +223,7 @@
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"
             >
               <div class="jss28">
-                <a href="/"
-                  ><img src="../assist/images/3.jpg" alt="est"
-                /></a>
+                <a href="/"><img src="../assist/images/3.jpg" alt="est" /></a>
               </div>
             </div>
             <div
@@ -332,9 +331,7 @@
                         style="transition-delay: 210ms"
                         aria-labelledby="SpeedDialtooltipexample-action-0-label"
                       >
-                        <img
-                          src="../assist/images/dashboard.svg"
-                        /><span
+                        <img src="../assist/images/dashboard.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button></span
                     ><span
@@ -353,9 +350,7 @@
                         style="transition-delay: 180ms"
                         aria-labelledby="SpeedDialtooltipexample-action-1-label"
                       >
-                        <img
-                          src="../assist/images/profile.svg"
-                        /><span
+                        <img src="../assist/images/profile.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button></span
                     ><span
@@ -374,9 +369,7 @@
                         style="transition-delay: 150ms"
                         aria-labelledby="SpeedDialtooltipexample-action-2-label"
                       >
-                        <img
-                          src="../assist/images/registrations.svg"
-                        /><span
+                        <img src="../assist/images/registrations.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button></span
                     ><span
@@ -414,9 +407,7 @@
                         style="transition-delay: 90ms"
                         aria-labelledby="SpeedDialtooltipexample-action-4-label"
                       >
-                        <img
-                          src="../assist/images/results.svg"
-                        /><span
+                        <img src="../assist/images/results.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button></span
                     ><span
@@ -435,9 +426,7 @@
                         style="transition-delay: 60ms"
                         aria-labelledby="SpeedDialtooltipexample-action-5-label"
                       >
-                        <img
-                          src="../assist/images/services.svg"
-                        /><span
+                        <img src="../assist/images/services.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button></span
                     ><span
@@ -456,9 +445,7 @@
                         style="transition-delay: 30ms"
                         aria-labelledby="SpeedDialtooltipexample-action-6-label"
                       >
-                        <img
-                          src="../assist/images/logout.svg"
-                        /><span
+                        <img src="../assist/images/logout.svg" /><span
                           class="MuiTouchRipple-root css-w0pj6f"
                         ></span></button
                     ></span>
@@ -470,15 +457,14 @@
               <ul>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/dashboard"
-                      ><img src="../assist/images/dashboard.svg" />
-                      Dashboard</a
+                    <a class="" href="/html/dashboard.html"
+                      ><img src="../assist/images/dashboard.svg" /> Dashboard</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/info"
+                    <a class="" href="/html/info.html"
                       ><img src="../assist/images/profile.svg" />My
                       Information</a
                     >
@@ -486,16 +472,15 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="active" href="/myregistration"
-                      ><img
-                        src="../assist/images/registrations.svg"
-                      />My Tests</a
+                    <a class="active" href="/html/myregistration.html"
+                      ><img src="../assist/images/registrations.svg" />My
+                      Tests</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/upcomingtests"
+                    <a class="" href="/html/upcomingtests.html"
                       ><img src="../assist/images/new.svg" />Test
                       Registration</a
                     >
@@ -503,26 +488,22 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/results"
-                      ><img src="../assist/images/results.svg" />
-                      My Results</a
+                    <a class="" href="/html/results.html"
+                      ><img src="../assist/images/results.svg" /> My Results</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/services"
-                      ><img
-                        src="../assist/images/services.svg"
-                      />Services</a
+                    <a class="" href="/html/services.html"
+                      ><img src="../assist/images/services.svg" />Services</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a href="/myregistration#"
-                      ><img src="../assist/images/logout.svg" />
-                      Logout</a
+                    <a href="/html/index.html"
+                      ><img src="../assist/images/logout.svg" /> Logout</a
                     >
                   </div>
                 </li>
@@ -889,5 +870,42 @@
         </div>
       </div>
     </div>
+
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="
+        display: none;
+        width: 40%;
+        padding: 0;
+        font-size: 1.15em;
+        background: #0e4c8d;
+        padding-top: 50px;
+        z-index: 9999;
+      "
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a  href="/html/index.html" id="a_1"
+        ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
+      </a>
+      <a href="/html/about.html"">About</a>
+      <a href="/html/news.html">News</a>
+      <a href="/html/news.html">Teacher Resources</a>
+      <a href="/html/faqs.html">FAQs</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "46%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>

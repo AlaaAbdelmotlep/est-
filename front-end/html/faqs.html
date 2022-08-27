@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/faqs.css"/>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/side-nav.css"/>
+
 
     <title>FAQs</title>
   </head>
@@ -20,7 +23,7 @@
             </div>
             <div class="jss5">
               <div>
-                <div><button class="jss14">Login</button></div>
+                <div><button class="jss14 loginBtn">Login</button></div>
               </div>
             </div>
           </div>
@@ -46,6 +49,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
+              onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -235,7 +239,7 @@
                     </li>
                   </li>
                 </ul>
-                <div><button class="jss14">Login</button></div>
+                <div><button class="jss14 loginBtn">Login</button></div>
               </div>
             </div>
           </div>
@@ -3181,6 +3185,43 @@
         </div>
         <div tabindex="0" data-test="sentinelEnd"></div>
       </div>
+
+      <div
+      id="mySidenav"
+      class="sidenav"
+      style="
+      display: none;
+        width: 40%;
+        padding: 0;
+        font-size: 1.15em;
+        background: #0e4c8d;
+        padding-top: 50px;
+        z-index: 9999;
+      "
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a  href="/html/index.html" id="a_1"
+        ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
+      </a>
+      <a href="/html/about.html"">About</a>
+      <a href="/html/news.html">News</a>
+      <a href="/html/news.html">Teacher Resources</a>
+      <a href="/html/faqs.html">FAQs</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "46%";
+      }
+  
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   
       <script type="text/javascript" src="../js/index.js"></script>
       

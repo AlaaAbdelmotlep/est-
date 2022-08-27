@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/services.css" />
+    <link rel="stylesheet" href="../css/side-nav.css" />
     <link rel="stylesheet" href="../floating button/fab.css" />
 
     <title>services</title>
@@ -53,6 +54,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
+              onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -147,16 +149,16 @@
                     ><img src="../assist/images/2.png" alt="est" />
                   </a>
                   <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/upcomingtests">Registrations</a></li>
-                    <li><a href="/news">News</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/dashboard.html">Dashboard</a></li>
+                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                    <li><a href="/html/news.html">News</a></li>
                     <li>
                       <a href="/news?filter=Teacher+Resources"
                         >Teacher Resources</a
                       >
                     </li>
-                    <li><a href="/faqs">FAQs</a></li>
+                    <li><a href="/html/faqs.html">FAQs</a></li>
                     <li>
                       <a href="mailto:tests@egyptianscholastictest.com"
                         >Contact Us</a
@@ -227,20 +229,21 @@
             >
               <div class="jss23">
                 <ul class="jss24">
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/dashboard">Dashboard</a></li>
-                  <li><a href="/news">News</a></li>
-                  <li>
-                    <a href="/news?filter=Teacher+Resources"
-                      >Teacher Resources</a
-                    >
-                  </li>
-                  <li><a href="/faqs">FAQs</a></li>
-                  <li>
-                    <a href="mailto:tests@egyptianscholastictest.com"
-                      >Contact Us</a
-                    >
-                  </li>
+                  <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/dashboard.html">Dashboard</a></li>
+                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                    <li><a href="/html/news.html">News</a></li>
+                    <li>
+                      <a href="/news?filter=Teacher+Resources"
+                        >Teacher Resources</a
+                      >
+                    </li>
+                    <li><a href="/html/faqs.html">FAQs</a></li>
+                    <li>
+                      <a href="mailto:tests@egyptianscholastictest.com"
+                        >Contact Us</a
+                      >
+                    </li>
                 </ul>
                 <div class="jss36">
                   <div class="jss35">
@@ -278,14 +281,14 @@
               <ul>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/dashboard"
+                    <a class="" href="/html/dashboard.html"
                       ><img src="../assist/images/dashboard.svg" /> Dashboard</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/info"
+                    <a class="" href="/html/info.html"
                       ><img src="../assist/images/profile.svg" />My
                       Information</a
                     >
@@ -293,7 +296,7 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="active" href="/myregistration"
+                    <a class="active" href="/html/myregistration.html"
                       ><img src="../assist/images/registrations.svg" />My
                       Tests</a
                     >
@@ -301,7 +304,7 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/upcomingtests"
+                    <a class="" href="/html/upcomingtests.html"
                       ><img src="../assist/images/new.svg" />Test
                       Registration</a
                     >
@@ -309,21 +312,21 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/results"
+                    <a class="" href="/html/results.html"
                       ><img src="../assist/images/results.svg" /> My Results</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/services"
+                    <a class="" href="/html/services.html"
                       ><img src="../assist/images/services.svg" />Services</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a href="/myregistration#"
+                    <a href="/html/index.html"
                       ><img src="../assist/images/logout.svg" /> Logout</a
                     >
                   </div>
@@ -645,7 +648,7 @@
           <span class="fab-label">Logout</span>
           <div class="fab-icon-holder">
             <i class="fas fa-file-alt">
-              <a href="./index.html">
+              <a href="./index.html" id="logout">
                 <img src="../assist/images/logout.svg" />
               </a>
             </i>
@@ -675,7 +678,7 @@
           <span class="fab-label">Test Registration</span>
           <div class="fab-icon-holder">
             <i class="fas fa-comment-alt">
-              <a href="./news.html">
+              <a href="./upcomingtests.html">
                 <img src="../assist/images/new.svg" />
               </a>
             </i>
@@ -685,7 +688,7 @@
           <span class="fab-label">My Tests</span>
           <div class="fab-icon-holder">
             <i class="fas fa-comment-alt">
-              <a href="./upcomingtests.html">
+              <a href="./myregistration.html">
                 <img src="../assist/images/registrations.svg" />
               </a>
             </i>
@@ -714,13 +717,50 @@
       </ul>
     </div>
 
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="
+        display: none;
+        width: 40%;
+        padding: 0;
+        font-size: 1.15em;
+        background: #0e4c8d;
+        padding-top: 50px;
+        z-index: 9999;
+      "
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a  href="/html/index.html" id="a_1"
+        ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
+      </a>
+      <a href="/html/about.html"">About</a>
+      <a href="/html/news.html">News</a>
+      <a href="/html/news.html">Teacher Resources</a>
+      <a href="/html/faqs.html">FAQs</a>
+      <a href="#">Contact Us</a>
+    </div>
+    
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "46%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
     <script type="text/javascript" src="../js/index.js"></script>
     <script type="text/javascript" src="../js/info.js"></script>
     <script>
       const accessToken = localStorage.getItem("token");
 
-      if(!accessToken){
-        console.log("HERE")
+      if (!accessToken) {
+        console.log("HERE");
         window.location.href = "./index.html";
       }
     </script>

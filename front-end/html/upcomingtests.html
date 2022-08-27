@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/upcomingtests.css" />
+    <link rel="stylesheet" href="../css/side-nav.css" />
     <link rel="stylesheet" href="../floating button/fab.css" />
 
     <title>upcomingtests</title>
@@ -53,6 +54,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
+              onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -147,16 +149,16 @@
                     ><img src="../assist/images/2.png" alt="est" />
                   </a>
                   <ul>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/upcomingtests">Registrations</a></li>
-                    <li><a href="/news">News</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/dashboard.html">Dashboard</a></li>
+                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                    <li><a href="/html/news.html">News</a></li>
                     <li>
                       <a href="/news?filter=Teacher+Resources"
                         >Teacher Resources</a
                       >
                     </li>
-                    <li><a href="/faqs">FAQs</a></li>
+                    <li><a href="/html/faqs.html">FAQs</a></li>
                     <li>
                       <a href="mailto:tests@egyptianscholastictest.com"
                         >Contact Us</a
@@ -227,20 +229,21 @@
             >
               <div class="jss23">
                 <ul class="jss24">
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/dashboard">Dashboard</a></li>
-                  <li><a href="/news">News</a></li>
-                  <li>
-                    <a href="/news?filter=Teacher+Resources"
-                      >Teacher Resources</a
-                    >
-                  </li>
-                  <li><a href="/faqs">FAQs</a></li>
-                  <li>
-                    <a href="mailto:tests@egyptianscholastictest.com"
-                      >Contact Us</a
-                    >
-                  </li>
+                  <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/dashboard.html">Dashboard</a></li>
+                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                    <li><a href="/html/news.html">News</a></li>
+                    <li>
+                      <a href="/news?filter=Teacher+Resources"
+                        >Teacher Resources</a
+                      >
+                    </li>
+                    <li><a href="/html/faqs.html">FAQs</a></li>
+                    <li>
+                      <a href="mailto:tests@egyptianscholastictest.com"
+                        >Contact Us</a
+                      >
+                    </li>
                 </ul>
                 <div class="jss36">
                   <div class="jss35">
@@ -272,21 +275,20 @@
                   style="opacity: 0; visibility: hidden"
                   class="MuiBackdrop-root css-um19vb"
                 ></div>
-
               </div>
             </div>
             <div class="jss51">
               <ul>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/dashboard"
+                    <a class="" href="/html/dashboard.html"
                       ><img src="../assist/images/dashboard.svg" /> Dashboard</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/info"
+                    <a class="" href="/html/info.html"
                       ><img src="../assist/images/profile.svg" />My
                       Information</a
                     >
@@ -294,7 +296,7 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="active" href="/myregistration"
+                    <a class="active" href="/html/myregistration.html"
                       ><img src="../assist/images/registrations.svg" />My
                       Tests</a
                     >
@@ -302,7 +304,7 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/upcomingtests"
+                    <a class="" href="/html/upcomingtests.html"
                       ><img src="../assist/images/new.svg" />Test
                       Registration</a
                     >
@@ -310,21 +312,21 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/results"
+                    <a class="" href="/html/results.html"
                       ><img src="../assist/images/results.svg" /> My Results</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a class="" href="/services"
+                    <a class="" href="/html/services.html"
                       ><img src="../assist/images/services.svg" />Services</a
                     >
                   </div>
                 </li>
                 <li>
                   <div class="jss53">
-                    <a href="/myregistration#"
+                    <a href="/html/index.html"
                       ><img src="../assist/images/logout.svg" /> Logout</a
                     >
                   </div>
@@ -464,319 +466,351 @@
       </div>
     </div>
 
-
-
-        <!-- --------------------------------------------------- LOGIN --------------------------------------------------------- -->
-        <div
-        role="presentation"
-        id="loginForm"
-        class="MuiDialog-root jss15"
-        style="position: fixed; z-index: 1300; inset: 0px; display: none"
+    <!-- --------------------------------------------------- LOGIN --------------------------------------------------------- -->
+    <div
+      role="presentation"
+      id="loginForm"
+      class="MuiDialog-root jss15"
+      style="position: fixed; z-index: 1300; inset: 0px; display: none"
+    >
+      <div
+        class="MuiBackdrop-root"
+        aria-hidden="true"
+        style="
+          opacity: 1;
+          transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        "
+      ></div>
+      <div tabindex="0" data-test="sentinelStart"></div>
+      <div
+        class="MuiDialog-container MuiDialog-scrollPaper"
+        role="none presentation"
+        tabindex="-1"
+        style="
+          opacity: 1;
+          transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        "
       >
         <div
-          class="MuiBackdrop-root"
-          aria-hidden="true"
-          style="
-            opacity: 1;
-            transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-          "
-        ></div>
-        <div tabindex="0" data-test="sentinelStart"></div>
-        <div
-          class="MuiDialog-container MuiDialog-scrollPaper"
-          role="none presentation"
-          tabindex="-1"
-          style="
-            opacity: 1;
-            transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-          "
+          class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullWidth MuiPaper-elevation24 MuiPaper-rounded"
+          role="dialog"
+          aria-labelledby="form-dialog-title"
         >
-          <div
-            class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullWidth MuiPaper-elevation24 MuiPaper-rounded"
-            role="dialog"
-            aria-labelledby="form-dialog-title"
-          >
-            <div class="MuiDialogTitle-root" id="form-dialog-title">
-              <h2 class="MuiTypography-root MuiTypography-h6">
-                <h3
-                  style="
-                    margin: 0;
-                    font-size: 32px;
-                    font-family: Muli-Bold;
-                    float: left;
-                  "
+          <div class="MuiDialogTitle-root" id="form-dialog-title">
+            <h2 class="MuiTypography-root MuiTypography-h6">
+              <h3
+                style="
+                  margin: 0;
+                  font-size: 32px;
+                  font-family: Muli-Bold;
+                  float: left;
+                "
+              >
+                LOGIN
+              </h3>
+              <div
+                class="close"
+                id="close"
+                style="
+                  color: #ffffff;
+                  width: 40px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  border-radius: 10px;
+                  justify-content: center;
+                  background-color: #144295;
+                  float: right;
+                "
+              >
+                <svg
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  style="cursor: pointer; font-size: 40px"
                 >
-                  LOGIN
-                </h3>
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  ></path>
+                </svg>
+              </div>
+            </h2>
+          </div>
+          <div class="MuiDialogContent-root">
+            <h6 class="jss16">
+              If you have already created an account on this site, please use it
+              to register for all tests. Please don't create multiple accounts
+              because this could affect your score services later.
+            </h6>
+            <form autocomplete="off" novalidate="">
+              <div
+                class="MuiGrid-root jss59 MuiGrid-container MuiGrid-spacing-xs-1"
+              >
                 <div
-                  class="close"
-                  id="close"
-                  style="
-                    color: #ffffff;
-                    width: 40px;
-                    height: 40px;
-                    display: flex;
-                    align-items: center;
-                    border-radius: 10px;
-                    justify-content: center;
-                    background-color: #144295;
-                    float: right;
-                  "
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-lg-5"
                 >
-                  <svg
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    style="cursor: pointer; font-size: 40px"
-                  >
-                    <path
-                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                    ></path>
-                  </svg>
-                </div>
-              </h2>
-            </div>
-            <div class="MuiDialogContent-root">
-              <h6 class="jss16">
-                If you have already created an account on this site, please use it
-                to register for all tests. Please don't create multiple accounts
-                because this could affect your score services later.
-              </h6>
-              <form autocomplete="off" novalidate="">
-                <div
-                  class="MuiGrid-root jss59 MuiGrid-container MuiGrid-spacing-xs-1"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-lg-5"
-                  >
-                    <h4>Email:</h4>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-lg-7"
-                  >
-                    <div class="jss60">
-                      <div class="MuiFormControl-root MuiTextField-root jss62">
-                        <div
-                          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-                        >
-                          <!-- get input value -->
-                          <input
-                            aria-invalid="false"
-                            autocomplete="off"
-                            id="outlined-secondary"
-                            name="email"
-                            type="email"
-                            class="MuiInputBase-input MuiOutlinedInput-input login"
-                            value=""
-                          />
-                          <fieldset
-                            aria-hidden="true"
-                            class="jss64 MuiOutlinedInput-notchedOutline"
-                            style="padding-left: 8px"
-                          >
-                            <legend class="jss65" style="width: 0.01px">
-                              <span>​</span>
-                            </legend>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                    <h6>* Make sure you are using a valid email address</h6>
-                  </div>
+                  <h4>Email:</h4>
                 </div>
                 <div
-                  class="MuiGrid-root jss59 MuiGrid-container MuiGrid-spacing-xs-1"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-lg-7"
                 >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-lg-5"
-                  >
-                    <h4>Password:</h4>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-lg-7"
-                  >
-                    <div class="jss60">
-                      <div class="MuiFormControl-root MuiTextField-root jss62">
-                        <div
-                          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
-                        >
-                          <!-- get input value -->
-                          <input
-                            aria-invalid="false"
-                            autocomplete="off"
-                            id="outlined-secondary"
-                            name="password"
-                            type="password"
-                            class="MuiInputBase-input MuiOutlinedInput-input login"
-                            value=""
-                          />
-                          <fieldset
-                            aria-hidden="true"
-                            class="jss64 MuiOutlinedInput-notchedOutline"
-                            style="padding-left: 8px"
-                          >
-                            <legend class="jss65" style="width: 0.01px">
-                              <span>​</span>
-                            </legend>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-around"
-                  style="padding-top: 5px"
-                >
-                  <div class="jss17">
-                    <div class="checkboxContainer">
-                      <label class="MuiFormControlLabel-root"
-                        ><span
-                          class="MuiButtonBase-root MuiIconButton-root jss68 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
-                          aria-disabled="false"
-                          ><span class="MuiIconButton-label"
-                            ><input
-                              class="jss71"
-                              name="remember"
-                              type="checkbox"
-                              data-indeterminate="false"
-                              value="" />
-                            <div class="checkedOutline"></div></span
-                          ><span class="MuiTouchRipple-root"></span></span
-                        ><span
-                          class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
-                          >Remember me</span
-                        ></label
+                  <div class="jss60">
+                    <div class="MuiFormControl-root MuiTextField-root jss62">
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
                       >
+                        <!-- get input value -->
+                        <input
+                          aria-invalid="false"
+                          autocomplete="off"
+                          id="outlined-secondary"
+                          name="email"
+                          type="email"
+                          class="MuiInputBase-input MuiOutlinedInput-input login"
+                          value=""
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="jss64 MuiOutlinedInput-notchedOutline"
+                          style="padding-left: 8px"
+                        >
+                          <legend class="jss65" style="width: 0.01px">
+                            <span>​</span>
+                          </legend>
+                        </fieldset>
+                      </div>
                     </div>
                   </div>
-                  <h5 class="underline">Forgot password?</h5>
+                  <h6>* Make sure you are using a valid email address</h6>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root jss59 MuiGrid-container MuiGrid-spacing-xs-1"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-lg-5"
+                >
+                  <h4>Password:</h4>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-lg-7"
                 >
-                  <div>
-                    <button class="jss14" onclick="loginLogic()">LOGIN</button>
+                  <div class="jss60">
+                    <div class="MuiFormControl-root MuiTextField-root jss62">
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+                      >
+                        <!-- get input value -->
+                        <input
+                          aria-invalid="false"
+                          autocomplete="off"
+                          id="outlined-secondary"
+                          name="password"
+                          type="password"
+                          class="MuiInputBase-input MuiOutlinedInput-input login"
+                          value=""
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="jss64 MuiOutlinedInput-notchedOutline"
+                          style="padding-left: 8px"
+                        >
+                          <legend class="jss65" style="width: 0.01px">
+                            <span>​</span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
                   </div>
-                  <!-- <div><button class="jss14 loginButton" onclick="login()"><a class="loginLink" >LOGIN</a></button></div> -->
                 </div>
-              </form>
-            </div>
-            <div class="MuiDialogActions-root MuiDialogActions-spacing">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-around"
+                style="padding-top: 5px"
+              >
+                <div class="jss17">
+                  <div class="checkboxContainer">
+                    <label class="MuiFormControlLabel-root"
+                      ><span
+                        class="MuiButtonBase-root MuiIconButton-root jss68 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                        aria-disabled="false"
+                        ><span class="MuiIconButton-label"
+                          ><input
+                            class="jss71"
+                            name="remember"
+                            type="checkbox"
+                            data-indeterminate="false"
+                            value="" />
+                          <div class="checkedOutline"></div></span
+                        ><span class="MuiTouchRipple-root"></span></span
+                      ><span
+                        class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+                        >Remember me</span
+                      ></label
+                    >
+                  </div>
+                </div>
+                <h5 class="underline">Forgot password?</h5>
+              </div>
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
               >
-                <p>Don`t have an account?</p>
-                <h5>SIGN UP NOW</h5>
+                <div>
+                  <button class="jss14" onclick="loginLogic()">LOGIN</button>
+                </div>
+                <!-- <div><button class="jss14 loginButton" onclick="login()"><a class="loginLink" >LOGIN</a></button></div> -->
               </div>
+            </form>
+          </div>
+          <div class="MuiDialogActions-root MuiDialogActions-spacing">
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+            >
+              <p>Don`t have an account?</p>
+              <h5>SIGN UP NOW</h5>
             </div>
           </div>
         </div>
-        <div tabindex="0" data-test="sentinelEnd"></div>
+      </div>
+      <div tabindex="0" data-test="sentinelEnd"></div>
+    </div>
+
+    <div id="fixedone"></div>
+    <div class="fab-container">
+      <div class="fab fab-icon-holder">
+        <svg
+          class="svgClass"
+          focusable="false"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          data-testid="MenuIcon"
+        >
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
       </div>
 
+      <ul class="fab-options">
+        <li>
+          <span class="fab-label">Logout</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-file-alt">
+              <a href="./index.html" id="logout">
+                <img src="../assist/images/logout.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">Services</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-video">
+              <a href="./services.html">
+                <img src="../assist/images/services.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">My Results</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-comments">
+              <a href="./results.html">
+                <img src="../assist/images/results.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">Test Registration</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-comment-alt">
+              <a href="./upcomingtests.html">
+                <img src="../assist/images/new.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">My Tests</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-comment-alt">
+              <a href="./myregistration.html">
+                <img src="../assist/images/registrations.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">My Information</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-comment-alt">
+              <a href="./info.html">
+                <img src="../assist/images/profile.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+        <li>
+          <span class="fab-label">Dashboard</span>
+          <div class="fab-icon-holder">
+            <i class="fas fa-comment-alt">
+              <a href="./dashboard.html">
+                <img src="../assist/images/dashboard.svg" />
+              </a>
+            </i>
+          </div>
+        </li>
+      </ul>
+    </div>
 
+    <div
+      id="mySidenav"
+      class="sidenav"
+      style="
+        display: none;
+        width: 40%;
+        padding: 0;
+        font-size: 1.15em;
+        background: #0e4c8d;
+        padding-top: 50px;
+        z-index: 9999;
+      "
+    >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a  href="/html/index.html" id="a_1"
+        ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
+      </a>
+      <a href="/html/about.html"">About</a>
+      <a href="/html/news.html">News</a>
+      <a href="/html/news.html">Teacher Resources</a>
+      <a href="/html/faqs.html">FAQs</a>
+      <a href="#">Contact Us</a>
+    </div>
 
-      <div id="fixedone"></div>
-      <div class="fab-container">
-        <div class="fab fab-icon-holder">
-          <svg
-            class="svgClass"
-            focusable="false"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            data-testid="MenuIcon"
-          >
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-          </svg>
-        </div>
-  
-        <ul class="fab-options">
-          <li>
-            <span class="fab-label">Logout</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-file-alt">
-                <a href="./index.html">
-                  <img src="../assist/images/logout.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">Services</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-video">
-                <a href="./services.html">
-                  <img src="../assist/images/services.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">My Results</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-comments">
-                <a href="./results.html">
-                  <img src="../assist/images/results.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">Test Registration</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-comment-alt">
-                <a href="./news.html">
-                  <img src="../assist/images/new.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">My Tests</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-comment-alt">
-                <a href="./upcomingtests.html">
-                  <img src="../assist/images/registrations.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">My Information</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-comment-alt">
-                <a href="./info.html">
-                  <img src="../assist/images/profile.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-          <li>
-            <span class="fab-label">Dashboard</span>
-            <div class="fab-icon-holder">
-              <i class="fas fa-comment-alt">
-                <a href="./dashboard.html">
-                  <img src="../assist/images/dashboard.svg" />
-                </a>
-              </i>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "46%";
+      }
 
-  
-      <script type="text/javascript" src="../js/index.js"></script>
-      <script type="text/javascript" src="../js/info.js"></script>
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
 
-      <script>
-        const accessToken = localStorage.getItem("token");
-  
-        if(!accessToken){
-          console.log("HERE")
-          window.location.href = "./index.html";
-        }
-      </script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/info.js"></script>
+
+    <script>
+      const accessToken = localStorage.getItem("token");
+
+      if (!accessToken) {
+        console.log("HERE");
+        window.location.href = "./index.html";
+      }
+    </script>
   </body>
 </html>
