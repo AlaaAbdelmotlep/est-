@@ -25,7 +25,7 @@
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -250,7 +250,7 @@
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -326,7 +326,7 @@
                 </li>
                 <li>
                   <div class="jss53">
-                    <a href="/html/index.html"
+                    <a href="../index.html" onclick="logout()"
                       ><img src="../assist/images/logout.svg" /> Logout</a
                     >
                   </div>
@@ -591,7 +591,7 @@
           <span class="fab-label">Logout</span>
           <div class="fab-icon-holder">
             <i class="fas fa-file-alt">
-              <a href="./index.html" id="logout">
+              <a href="../index.html" id="logout" onclick="logout()">
                 <img src="../assist/images/logout.svg" />
               </a>
             </i>
@@ -676,7 +676,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <a  href="/html/index.html" id="a_1"
+      <a  href="../index.html" id="a_1"
         ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
       </a>
       <a href="/html/about.html"">About</a>
@@ -694,6 +694,10 @@
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+      }
+
+      function logout() {
+        localStorage.clear();
       }
     </script>
 

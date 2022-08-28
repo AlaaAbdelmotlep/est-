@@ -1,28 +1,29 @@
 {
     "retagPersonalInfo": {
+      "NickName":"Retag Ahmadoly",
       "EnglishName": "Retag Ahmadoly El-dein Khalifa",
       "ArabicName": " ريتاج احمدولي الدين خليفه",
       "Gender": "female",
       "DateOfBirth": "26 / 9 / 2003",
       "NationalIDNumber": "30309262502382",
       "PassportNumber": "",
-      "EmailAddress": "retag@gmail.com",
+      "EmailAddress": "retagahmadoly269@gmail.com",
       "Nationality": "Egypt",
-      "MobileNumber": "12340",
-      "Landline": "12340",
-      "CountryCity": "Asyut",
-      "Address1": "aaaaaa",
-      "Address2": "gggg"
+      "MobileNumber": "0122546358",
+      "Landline": "",
+      "CountryCity": "أسيوط",
+      "Address1": "مركز القوصيه",
+      "Address2": ""
     },
     "retagParentInformation": {
-      "Name": "Retafge Parent",
-      "Email": "retage@gmail.com",
-      "Relationship": "mother"
+      "Name": "Ahmadoly El-dein Khalifa",
+      "Email": "ahmadolyeldein@gmail.com",
+      "Relationship": "father"
     },
     "retagSchoolInformation": {
-      "SchoolName": "retage school",
-      "Grade": "132",
-      "YearOfGraduation": "2011"
+      "SchoolName": "Manarat El Mostaqbal American School",
+      "Grade": "Grade 12",
+      "YearOfGraduation": "2022"
     }
   }
   

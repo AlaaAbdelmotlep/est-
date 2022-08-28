@@ -1,5 +1,6 @@
 {
     "amrpersonalInfo": {
+      "NickName":"AMR ABDELGAWAD",
       "EnglishName": "AMR ABDELGAWAD ALI ABDELGAWAD",
       "ArabicName": "عمرو عبدالجواد على عبدالجواد",
       "Gender": "Male",
@@ -10,18 +11,20 @@
       "Nationality": "Egypt",
       "MobileNumber": "12346",
       "Landline": "12346",
-      "CountryCity": "alaaaaaaaa",
-      "Address1": "aaaaaa",
-      "Address2": "gggg"
+      "CountryCity": "cairo",
+      "Address1": "mokkatam",
+      "Address2": ""
     },
     "amrParentInformation": {
-      "Email": "alaa@gmail.com",
+      "Email": "radwaomrahmed123@gmail.com",
       "Relationship": "mother"
     },
     "amrSchoolInformation": {
-      "SchoolName": "alaaa",
+      "SchoolName": "Manarat El Mostaqbal American School",
       "Grade": "132",
       "YearOfGraduation": "2011"
     }
   }
+  
+
   

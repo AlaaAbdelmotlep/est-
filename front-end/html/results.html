@@ -25,7 +25,7 @@
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -250,7 +250,7 @@
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -326,7 +326,7 @@
                 </li>
                 <li>
                   <div class="jss54">
-                    <a href="/html/index.html"
+                    <a href="../index.html" onclick="logout()"
                       ><img src="../assist/images/logout.svg" /> Logout</a
                     >
                   </div>
@@ -396,8 +396,8 @@
                       <p>Literacy</p>
                     </td>
                     <td class="jss50">
-                      <p>1000</p>
-                      <p>1000</p>
+                      <p>690</p>
+                      <p>710</p>
                     </td>
                     <td>
                       <svg
@@ -420,8 +420,8 @@
                       <p>Literacy</p>
                     </td>
                     <td class="jss50">
-                      <p>1000</p>
-                      <p>1000</p>
+                      <p>700</p>
+                      <p>695</p>
                     </td>
                     <td>
                       <svg
@@ -444,8 +444,8 @@
                       <p>Math 1</p>
                     </td>
                     <td class="jss50">
-                      <p>1000</p>
-                      <p>1000</p>
+                      <p>705</p>
+                      <p>720</p>
                     </td>
                     <td>
                       <svg
@@ -468,8 +468,8 @@
                       <p>Literacy</p>
                     </td>
                     <td class="jss50">
-                      <p>9000</p>
-                      <p>450</p>
+                      <p>691</p>
+                      <p>710</p>
                     </td>
                     <td>
                       <svg
@@ -492,8 +492,8 @@
                       <p>Math 1</p>
                     </td>
                     <td class="jss50">
-                      <p>5222</p>
-                      <p>490</p>
+                      <p>650</p>
+                      <p>720</p>
                     </td>
                     <td>
                       <svg
@@ -516,8 +516,8 @@
                       <p>Literacy</p>
                     </td>
                     <td class="jss50">
-                      <p>490</p>
-                      <p>450</p>
+                      <p>700</p>
+                      <p>690</p>
                     </td>
                     <td>
                       <svg
@@ -629,7 +629,7 @@
           <span class="fab-label">Logout</span>
           <div class="fab-icon-holder">
             <i class="fas fa-file-alt">
-              <a href="./index.html" id="logout">
+              <a href="../index.html" id="logout" onclick="logout()">
                 <img src="../assist/images/logout.svg" />
               </a>
             </i>
@@ -714,7 +714,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <a  href="/html/index.html" id="a_1"
+      <a  href="../index.html" id="a_1"
         ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
       </a>
       <a href="/html/about.html"">About</a>
@@ -732,6 +732,10 @@
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+      }
+
+      function logout() {
+        localStorage.clear();
       }
     </script>
 

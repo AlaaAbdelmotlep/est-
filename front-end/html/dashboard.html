@@ -24,7 +24,7 @@
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -53,7 +53,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
-              onclick="openNav()"
+                onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -229,27 +229,27 @@
               <div class="jss23">
                 <ul class="jss24">
                   <li><a href="/html/about.html">About</a></li>
-                    <li><a href="/html/dashboard.html">Dashboard</a></li>
-                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
-                    <li><a href="/html/news.html">News</a></li>
-                    <li>
-                      <a href="/news?filter=Teacher+Resources"
-                        >Teacher Resources</a
-                      >
-                    </li>
-                    <li><a href="/html/faqs.html">FAQs</a></li>
-                    <li>
-                      <a href="mailto:tests@egyptianscholastictest.com"
-                        >Contact Us</a
-                      >
-                    </li>
+                  <li><a href="/html/dashboard.html">Dashboard</a></li>
+                  <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                  <li><a href="/html/news.html">News</a></li>
+                  <li>
+                    <a href="/news?filter=Teacher+Resources"
+                      >Teacher Resources</a
+                    >
+                  </li>
+                  <li><a href="/html/faqs.html">FAQs</a></li>
+                  <li>
+                    <a href="mailto:tests@egyptianscholastictest.com"
+                      >Contact Us</a
+                    >
+                  </li>
                 </ul>
                 <div class="jss36">
                   <div class="jss35">
                     <img src="" class="student_img" alt="profile" />
                   </div>
                   <div>
-                    <a href="/info"><h5 class="student_name"></h5></a>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
                     <h6>Student</h6>
                   </div>
                 </div>
@@ -294,14 +294,14 @@
                       >
                     </div>
                   </li>
-                  <!-- <li>
+                  <li>
                     <div class="jss46">
                       <a class="" href="upcomingtests.html"
                         ><img src="../assist/images/new.svg" />Test
                         Registration</a
                       >
                     </div>
-                  </li> -->
+                  </li>
                   <li>
                     <div class="jss46">
                       <a class="" href="results.html"
@@ -319,7 +319,7 @@
                   </li>
                   <li>
                     <div class="jss46">
-                      <a href="./index.html" id="logout"
+                      <a href="../index.html" id="logout" onclick="logout()"
                         ><img src="../assist/images/logout.svg" /> Logout</a
                       >
                     </div>
@@ -672,7 +672,7 @@
           <span class="fab-label">Logout</span>
           <div class="fab-icon-holder">
             <i class="fas fa-file-alt">
-              <a href="./index.html" id="logout">
+              <a href="../index.html" id="logout" onclick="logout()">
                 <img src="../assist/images/logout.svg" />
               </a>
             </i>
@@ -757,15 +757,17 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <a href="/html/index.html" id="a_1"
+      <a href="../index.html" id="a_1"
         ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
       </a>
-      <a href="/html/about.html"">About</a>
+      <a href="/html/about.html">About</a>
       <a href="/html/news.html">News</a>
       <a href="/html/news.html">Teacher Resources</a>
       <a href="/html/faqs.html">FAQs</a>
       <a href="#">Contact Us</a>
     </div>
+
+    <script type="text/javascript" src="../js/info.js"></script>
 
     <script>
       function openNav() {
@@ -776,15 +778,17 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
-    </script>
 
-    <script type="text/javascript" src="../js/info.js"></script>
+      function logout() {
+        localStorage.clear();
+      }
+    </script>
 
     <script>
       const accessToken = localStorage.getItem("token");
 
       if (!accessToken) {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
       }
     </script>
   </body>

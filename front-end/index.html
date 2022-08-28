@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navlogo.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/side-nav.css" />
@@ -16,7 +17,7 @@
         <div class="MuiContainer-root MuiContainer-maxWidthLg">
           <div class="jss1">
             <div class="jss3">
-              <a href="/html/index.html"
+              <a href="./index.html"
                 ><img src="../assist/images/3.jpg" alt="est"
               /></a>
             </div>
@@ -211,7 +212,7 @@
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-2 MuiGrid-grid-lg-2"
             >
               <div class="jss28">
-                <a href="/html/index.html"
+                <a href="./index.html"
                   ><img src="../assist/images/3.jpg" alt="est"
                 /></a>
               </div>
@@ -234,6 +235,15 @@
                   </li>
                 </ul>
                 <div><button class="jss14 loginBtn">Login</button></div>
+                <div class="jss36" style="display: none">
+                  <div class="jss35">
+                    <img src="" class="student_img" alt="profile" />
+                  </div>
+                  <div>
+                    <a href="/info"><h5 class="student-nick-name"></h5></a>
+                    <h6>Student</h6>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1138,6 +1148,7 @@
                         ><span class="MuiTouchRipple-root"></span></span
                       ><span
                         class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+                        onclick="showInvalid()"
                         >Remember me</span
                       ></label
                     >
@@ -1172,6 +1183,11 @@
       <div tabindex="0" data-test="sentinelEnd"></div>
     </div>
 
+    <!-- ------------------------------- invalid credintial -------------------------------- -->
+    <!-- <div class="MuiCollapse-wrapper jss100"><div class="MuiCollapse-wrapperInner"><div class="jss83 jss98 jss89"><div class="jss102 jss95 jss92 jss90" aria-describedby="notistack-snackbar" role="alert" style="transform: none; transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;"><div id="notistack-snackbar" class="jss96"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 20px; margin-inline-end: 8px;"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,
+      6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,
+      13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path></svg>invalid credentials</div></div></div></div></div>
+       -->
 
     <!-- ---------------------------------- side nav ----------------------------------------- -->
     <div
@@ -1190,15 +1206,18 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <a href="/html/index.html" id="a_1"
+      <a href="./index.html" id="a_1"
         ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
       </a>
-      <a href="/html/about.html"">About</a>
+      <a href="/html/about.html">About</a>
       <a href="/html/news.html">News</a>
       <a href="/html/news.html">Teacher Resources</a>
       <a href="/html/faqs.html">FAQs</a>
       <a href="#">Contact Us</a>
     </div>
+
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/info.js"></script>
 
     <script>
       function openNav() {
@@ -1209,8 +1228,21 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
-    </script>
 
-    <script type="text/javascript" src="../js/index.js"></script>
+      const accessToken = localStorage.getItem("token");
+
+      if (accessToken) {
+        const loginButton = document.getElementsByClassName("loginBtn");
+        for (let i = 0; i < loginButton.length; i++) {
+          loginButton[i].style.display = "none";
+        }
+        document.getElementsByClassName("jss36")[0].style.display = "block";
+      } else {
+        const loginButton = document.getElementsByClassName("loginBtn");
+        for (let i = 0; i < loginButton.length; i++) {
+          loginButton[i].style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
