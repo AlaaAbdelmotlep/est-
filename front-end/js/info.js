@@ -50,9 +50,20 @@ fetch("http://localhost:8080/profile", {
 
       const nickName = document.getElementsByClassName("student-nick-name");
 
+      const mathematics = document.getElementsByClassName("mathematics");
+      const literacy = document.getElementsByClassName("literacy");
+      const biology = document.getElementsByClassName("biology");
+      const math = document.getElementsByClassName("math");
+
+      const retagDegree = document.getElementsByClassName("retage-degree");
+
       if (data.retagProfile) {
         src = "../assist/images/retag_img.jpeg";
         idSrc = "../assist/images/retag_id.jpg";
+
+        for (let i = 0; i < retagDegree.length; i++) {
+          retagDegree[i].style.display = "none";
+        }
 
         for (let i = 0; i < nickName.length; i++) {
           nickName[i].innerHTML = data.retagProfile.retagPersonalInfo.NickName;
@@ -102,6 +113,24 @@ fetch("http://localhost:8080/profile", {
           idCopy[i].data = idSrc;
         }
 
+        // 1----
+        for (let i = 0; i < mathematics.length; i++) {
+          mathematics[i].innerHTML =
+            data.retagProfile.retagPersonalInfo.mathematical;
+        }
+
+        for (let i = 0; i < literacy.length; i++) {
+          literacy[i].innerHTML = data.retagProfile.retagPersonalInfo.literacy;
+        }
+
+        for (let i = 0; i < biology.length; i++) {
+          biology[i].innerHTML = data.retagProfile.retagPersonalInfo.Biology;
+        }
+
+        for (let i = 0; i < math.length; i++) {
+          math[i].innerHTML = data.retagProfile.retagPersonalInfo.math;
+        }
+        // 1---
         englishName.innerHTML = data.retagProfile.retagPersonalInfo.EnglishName;
         arabicName.innerHTML = data.retagProfile.retagPersonalInfo.ArabicName;
         birthDate.innerHTML = data.retagProfile.retagPersonalInfo.DateOfBirth;
@@ -170,6 +199,25 @@ fetch("http://localhost:8080/profile", {
         for (let i = 0; i < idCopy.length; i++) {
           idCopy[i].data = idSrc;
         }
+
+        // 1----
+        for (let i = 0; i < mathematics.length; i++) {
+          mathematics[i].innerHTML =
+            data.amrProfile.amrpersonalInfo.mathematical;
+        }
+
+        for (let i = 0; i < literacy.length; i++) {
+          literacy[i].innerHTML = data.amrProfile.amrpersonalInfo.literacy;
+        }
+
+        for (let i = 0; i < biology.length; i++) {
+          biology[i].innerHTML = data.amrProfile.amrpersonalInfo.Biology;
+        }
+
+        for (let i = 0; i < math.length; i++) {
+          math[i].innerHTML = data.amrProfile.amrpersonalInfo.math;
+        }
+        // 1---
 
         englishName.innerHTML = data.amrProfile.amrpersonalInfo.EnglishName;
         arabicName.innerHTML = data.amrProfile.amrpersonalInfo.ArabicName;
