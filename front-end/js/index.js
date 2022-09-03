@@ -30,7 +30,7 @@ const loginBtn = document.getElementById("submitBtn");
 
 loginBtn.addEventListener("click", () => {
     const data = { email: email.value, password: password.value };
-    fetch("http://localhost:8080/login", {
+    fetch("http://65.108.33.225:8080/login", {
       method: "POST",
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(data)

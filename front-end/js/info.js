@@ -2,7 +2,7 @@ const token = localStorage.getItem("token");
 let src;
 let idSrc;
 
-fetch("http://localhost:8080/profile", {
+fetch("http://65.108.33.225:8080/profile", {
   method: "GET",
   headers: { Authorization: `Bearer ${token}` },
 })
@@ -21,6 +21,8 @@ fetch("http://localhost:8080/profile", {
       const phoneNum = document.getElementById("phone");
       const landline = document.getElementById("landline");
       const idNum = document.getElementById("id.number");
+
+      const retageDate = document.getElementById("retag-date");
 
       const parentName = document.getElementById("parentalInfo[0].name");
       const parentEmail = document.getElementById("parentalInfo[0].email");
@@ -148,6 +150,8 @@ fetch("http://localhost:8080/profile", {
         grade.innerHTML = data.retagProfile.retagSchoolInformation.Grade;
         greadYear.innerHTML =
           data.retagProfile.retagSchoolInformation.YearOfGraduation;
+
+        retageDate.innerHTML = data.retagProfile.retagPersonalInfo.RetageDate;
       }
       if (data.amrProfile) {
         src = "../assist/images/amr-img.jpeg";
