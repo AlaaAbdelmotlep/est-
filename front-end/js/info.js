@@ -11,13 +11,13 @@ fetch("http://65.108.33.225:8080/profile", {
     if (data.Error) {
       localStorage.clear();
     } else {
-      const studentImg = document.getElementsByClassName("student_img");
-      const studentName = document.getElementsByClassName("student_name");
+      const studentImg = document.getElementsByClassName("student-img");
+      const studentName = document.getElementsByClassName("student-name");
 
       // id
-      const englishName = document.getElementById("english_name");
-      const arabicName = document.getElementById("arabic_name");
-      const birthDate = document.getElementById("birth_date");
+      const englishName = document.getElementById("english-name");
+      const arabicName = document.getElementById("arabic-name");
+      const birthDate = document.getElementById("birth-date");
       const phoneNum = document.getElementById("phone");
       const landline = document.getElementById("landline");
       const idNum = document.getElementById("id.number");
@@ -42,13 +42,13 @@ fetch("http://65.108.33.225:8080/profile", {
 
       // class
       const gender = document.getElementsByClassName("gender");
-      const nationalId = document.getElementsByClassName("national_id");
-      const passportNum = document.getElementsByClassName("passport_num");
-      const EmailAddress = document.getElementsByClassName("email_address");
+      const nationalId = document.getElementsByClassName("national-id");
+      const passportNum = document.getElementsByClassName("passport-num");
+      const EmailAddress = document.getElementsByClassName("email-address");
       const nationality = document.getElementsByClassName("nationality");
       const city = document.getElementsByClassName("city");
       const address = document.getElementsByClassName("address");
-      const idCopy = document.getElementsByClassName("id_copy");
+      const idCopy = document.getElementsByClassName("id-copy");
 
       const nickName = document.getElementsByClassName("student-nick-name");
 
@@ -63,7 +63,7 @@ fetch("http://65.108.33.225:8080/profile", {
         src = "../assist/images/retag_img.jpeg";
         idSrc = "../assist/images/retag_id.jpg";
 
-        retageDate.innerHTML = data.retagProfile.retagPersonalInfo.RetageDate
+       
 
         for (let i = 0; i < retagDegree.length; i++) {
           retagDegree[i].style.display = "none";
@@ -155,6 +155,8 @@ fetch("http://65.108.33.225:8080/profile", {
         grade.innerHTML = data.retagProfile.retagSchoolInformation.Grade;
         greadYear.innerHTML =
           data.retagProfile.retagSchoolInformation.YearOfGraduation;
+
+          retageDate.innerHTML = data.retagProfile.retagPersonalInfo.RetageDate
 
       }
       if (data.amrProfile) {
