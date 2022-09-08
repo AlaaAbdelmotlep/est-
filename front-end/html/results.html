@@ -54,7 +54,7 @@
           <div>
             <div class="bm-burger-button" style="z-index: 1000">
               <button
-              onclick="openNav()"
+                onclick="openNav()"
                 id="react-burger-menu-btn"
                 style="
                   position: absolute;
@@ -230,20 +230,20 @@
               <div class="jss23">
                 <ul class="jss24">
                   <li><a href="/html/about.html">About</a></li>
-                    <li><a href="/html/dashboard.html">Dashboard</a></li>
-                    <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
-                    <li><a href="/html/news.html">News</a></li>
-                    <li>
-                      <a href="/news?filter=Teacher+Resources"
-                        >Teacher Resources</a
-                      >
-                    </li>
-                    <li><a href="/html/faqs.html">FAQs</a></li>
-                    <li>
-                      <a href="mailto:tests@egyptianscholastictest.com"
-                        >Contact Us</a
-                      >
-                    </li>
+                  <li><a href="/html/dashboard.html">Dashboard</a></li>
+                  <!-- <li><a href="/html/upcomingtests.html">Registrations</a></li> -->
+                  <li><a href="/html/news.html">News</a></li>
+                  <li>
+                    <a href="/news?filter=Teacher+Resources"
+                      >Teacher Resources</a
+                    >
+                  </li>
+                  <li><a href="/html/faqs.html">FAQs</a></li>
+                  <li>
+                    <a href="mailto:tests@egyptianscholastictest.com"
+                      >Contact Us</a
+                    >
+                  </li>
                 </ul>
                 <div class="jss36">
                   <div class="jss35">
@@ -714,10 +714,10 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-      <a  href="../index.html" id="a_1"
+      <a href="../index.html" id="a_1"
         ><img src="../assist/images/side-nav.png" id="img_1" alt="est" />
       </a>
-      <a href="/html/about.html"">About</a>
+      <a href="/html/about.html">About</a>
       <a href="/html/news.html">News</a>
       <a href="/html/news.html">Teacher Resources</a>
       <a href="/html/faqs.html">FAQs</a>
@@ -747,6 +747,17 @@
         console.log("HERE");
         window.location.href = "./index.html";
       }
+
+      const retageDate = document.getElementById("retagdate");
+
+      fetch("http://65.108.33.225:8080/profile", {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          retageDate.innerHTML = data.retagProfile.retagPersonalInfo.RetageDate;
+        });
     </script>
   </body>
 </html>

@@ -22,8 +22,6 @@ fetch("http://65.108.33.225:8080/profile", {
       const landline = document.getElementById("landline");
       const idNum = document.getElementById("id.number");
 
-      const retageDate = document.getElementById("retagdate");
-
       const parentName = document.getElementById("parentalInfo[0].name");
       const parentEmail = document.getElementById("parentalInfo[0].email");
       const parentRelation = document.getElementById(
@@ -59,11 +57,10 @@ fetch("http://65.108.33.225:8080/profile", {
 
       const retagDegree = document.getElementsByClassName("retage-degree");
 
+      // try {
       if (data.retagProfile) {
         src = "../assist/images/retag_img.jpeg";
         idSrc = "../assist/images/retag_id.jpg";
-
-       
 
         for (let i = 0; i < retagDegree.length; i++) {
           retagDegree[i].style.display = "none";
@@ -155,10 +152,9 @@ fetch("http://65.108.33.225:8080/profile", {
         grade.innerHTML = data.retagProfile.retagSchoolInformation.Grade;
         greadYear.innerHTML =
           data.retagProfile.retagSchoolInformation.YearOfGraduation;
-
-          retageDate.innerHTML = data.retagProfile.retagPersonalInfo.RetageDate
-
       }
+      // } catch {}
+
       if (data.amrProfile) {
         src = "../assist/images/amr-img.jpeg";
 
