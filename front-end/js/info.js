@@ -57,7 +57,7 @@ fetch("http://65.108.33.225:8080/profile", {
 
       const retagDegree = document.getElementsByClassName("retage-degree");
 
-      // try {
+      // ---------------- retag
       if (data.retagProfile) {
         src = "../assist/images/retag_img.jpeg";
         idSrc = "../assist/images/retag_id.jpg";
@@ -153,8 +153,101 @@ fetch("http://65.108.33.225:8080/profile", {
         greadYear.innerHTML =
           data.retagProfile.retagSchoolInformation.YearOfGraduation;
       }
-      // } catch {}
 
+      // ------------------------ tasnem
+      if (data.tasnemProfile) {
+        src = "../assist/images/tasnem.png";
+        idSrc = "../assist/images/tasneedId.png";
+
+        for (let i = 0; i < retagDegree.length; i++) {
+          retagDegree[i].style.display = "none";
+        }
+
+        for (let i = 0; i < nickName.length; i++) {
+          nickName[i].innerHTML = data.tasnemProfile.tasneemPersonalInfo.NickName;
+        }
+
+        for (let i = 0; i < studentImg.length; i++) {
+          studentImg[i].src = src;
+          studentImg[i].data = src;
+        }
+
+        for (let i = 0; i < studentName.length; i++) {
+          studentName[i].innerHTML =
+          data.tasnemProfile.tasneemPersonalInfo.EnglishName;
+        }
+
+        for (let i = 0; i < gender.length; i++) {
+          gender[i].innerHTML = data.tasnemProfile.tasneemPersonalInfo.Gender;
+        }
+
+        for (let i = 0; i < nationalId.length; i++) {
+          nationalId[i].innerHTML =
+          data.tasnemProfile.tasneemPersonalInfo.NationalIDNumber;
+        }
+
+        for (let i = 0; i < passportNum.length; i++) {
+          passportNum[i].innerHTML =
+            data.tasnemProfile.tasneemPersonalInfo.PassportNumber;
+        }
+
+        for (let i = 0; i < EmailAddress.length; i++) {
+          EmailAddress[i].innerHTML =
+            data.tasnemProfile.tasneemPersonalInfo.EmailAddress;
+        }
+
+        for (let i = 0; i < nationality.length; i++) {
+          nationality[i].innerHTML =
+            data.tasnemProfile.tasneemPersonalInfo.Nationality;
+        }
+        for (let i = 0; i < city.length; i++) {
+          city[i].value = data.tasnemProfile.tasneemPersonalInfo.CountryCity;
+        }
+        for (let i = 0; i < address.length; i++) {
+          address[i].value = data.tasnemProfile.tasneemPersonalInfo.Address1;
+        }
+
+        for (let i = 0; i < idCopy.length; i++) {
+          idCopy[i].data = idSrc;
+        }
+
+        for (let i = 0; i < mathematics.length; i++) {
+          mathematics[i].innerHTML =
+            data.tasnemProfile.tasneemPersonalInfo.mathematical;
+        }
+
+        for (let i = 0; i < literacy.length; i++) {
+          literacy[i].innerHTML = data.tasnemProfile.tasneemPersonalInfo.literacy;
+        }
+
+        for (let i = 0; i < biology.length; i++) {
+          biology[i].innerHTML = data.tasnemProfile.tasneemPersonalInfo.Biology;
+        }
+
+        for (let i = 0; i < math.length; i++) {
+          math[i].innerHTML = data.tasnemProfile.tasneemPersonalInfo.math;
+        }
+
+        englishName.innerHTML = data.tasnemProfile.tasneemPersonalInfo.EnglishName;
+        arabicName.innerHTML = data.tasnemProfile.tasneemPersonalInfo.ArabicName;
+        birthDate.innerHTML = data.tasnemProfile.tasneemPersonalInfo.DateOfBirth;
+        phoneNum.value = data.tasnemProfile.tasneemPersonalInfo.MobileNumber;
+        landline.placeholder = data.tasnemProfile.tasneemPersonalInfo.Landline;
+        idNum.value = data.tasnemProfile.tasneemPersonalInfo.NationalIDNumber;
+
+        parentName.value = data.tasnemProfile.tasneemParentInformation.Name;
+        parentEmail.value = data.tasnemProfile.tasneemParentInformation.Email;
+        parentRelation.innerHTML =
+          data.tasnemProfile.tasneemParentInformation.Relationship;
+
+        schoolName.innerHTML =
+          data.tasnemProfile.tasneemSchoolInformation.SchoolName;
+        grade.innerHTML = data.tasnemProfile.tasneemSchoolInformation.Grade;
+        greadYear.innerHTML =
+          data.tasnemProfile.tasneemSchoolInformation.YearOfGraduation;
+      }
+
+      // ------------------- amr
       if (data.amrProfile) {
         src = "../assist/images/amr-img.jpeg";
 
