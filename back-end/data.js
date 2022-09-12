@@ -117,7 +117,7 @@ mongoose.connect(process.env.DB_URL)
             console.log("DB connected ....");
             
            // listen port
-        app.listen(process.env.PORT || 8080, () => {
+        app.listen(process.env.PORT || 3000, () => {
             console.log("I'm Listen")
         });
 

@@ -10,7 +10,7 @@ const userRoutes = require("./routers")
 const app = express();
 
 // listen to server 
-app.listen(8080, () => console.log("Listening"));
+app.listen(3000, () => console.log("Listening"));
 
 // MW method
 app.get('/', function (req, res) {
